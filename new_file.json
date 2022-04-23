@@ -1,0 +1,9 @@
+CREATE TABLE user（name varchar（20）, PRIMARY KEY （name）） ENGINE=InnoDB;
+BEGIN;
+INSERT INTO user SELECT '张一'
+COMMIT;
+BEGIN;
+INSERT INTO user SELECT '李四';
+INSERT INTO user SELECT '李四';
+ ROLLBACK;
+SELECT * FROM user;

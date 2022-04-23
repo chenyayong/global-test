@@ -1,0 +1,17 @@
+{
+  "name": "global",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "jweixin-module": "^1.6.0"
+  },
+  "devDependencies": {
+    "@vue/eslint-config-standard": "^6.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

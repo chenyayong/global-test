@@ -1,0 +1,213 @@
+.font-16{
+	font-size: 24rpx;
+	transform: scale(0.6);
+}
+.font-20{
+	font-size: 24rpx;
+	transform: scale(0.83);
+}
+.font-22{
+	font-size: 24rpx;
+	transform: scale(0.91);
+}
+.font-24{
+	font-size: 24rpx;
+}
+.font-26{
+	font-size: 26rpx;
+}
+.font-28{
+	font-size: 28rpx;
+}
+.font-30{
+	font-size: 30rpx;
+}
+.font-32{
+	font-size: 32rpx;
+}
+.font-34{
+	font-size: 34rpx;
+}
+.font-36{
+	font-size: 36rpx;
+}
+.font-38{
+	font-size: 38rpx;
+}
+.font-40{
+	font-size: 40rpx;
+}
+.font-44{
+	font-size: 44rpx;
+}
+.font-48{
+	font-size: 48rpx;
+}
+.font-56{
+	font-size: 56rpx;
+}
+.font-60{
+	font-size: 60rpx;
+}
+.font-72{
+	font-size: 72rpx;
+}
+.font-84{
+	font-size: 84rpx;
+}
+.inline{
+    display: inline-block;
+}
+.ellipsis{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.ellipsis-two{
+	overflow: hidden;
+	text-overflow:ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.bold{
+    font-weight: bold;
+}
+.is-old-price{
+	position: relative;
+	color: #B3B3B3;
+}
+.is-old-price::after{
+	content: "";
+	position: absolute;
+	height: 2rpx;
+	width: 100%;
+	background-color: #B3B3B3;
+	top: 50%;
+	left: 0;
+}
+.flex{
+	display: flex;
+	&.s-center{
+		justify-content: space-between;
+	}
+	&.center{
+		align-items: center;
+	}
+	.flex-item{
+		flex: 1;
+	}
+}
+
+.header-input{
+	height:332rpx;
+	/* #ifndef H5 */
+	background:linear-gradient(180deg,rgba(81,131,255,1) 0%,rgba(65,100,244,1) 100%);
+	/* #endif */
+	/* #ifdef H5 */
+	background: linear-gradient(225deg, #02D86D 0%, #00B159 100%);
+	/* #endif */
+	padding-top: 10rpx;
+	box-sizing: border-box;
+}
+.header-input-input{
+	width:690rpx;
+	height:60rpx;
+	background:rgba(247,247,247,1);
+	border-radius:29rpx;
+	opacity:0.9;
+	margin: 0 auto 0 auto;
+	display: flex;
+	align-items: center;
+	padding: 0 30rpx;
+	box-sizing: border-box;
+	image{
+		height: 26rpx;
+		width: 26rpx;
+	}
+	>.font-26{
+		color: #A2A7BA;
+		margin-left: 10rpx;
+	}
+}
+
+/* config */
+.config{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 99;
+}
+.config-content{
+	background-color: #ffffff;
+	width: 610rpx;
+	text-align: center;
+	border-radius:10rpx;
+}
+.config-content .title{
+	line-height: 144rpx;
+}
+.config-buttom{
+	display: flex;
+	height: 100rpx;
+	border-top: 2rpx solid #E6E6E6;
+	margin-top: 50rpx;
+	display: flex;
+	position: relative;
+}
+.config-buttom>view{
+	flex: 1;
+	line-height: 100rpx;
+	text-align: center;
+	color: #4D4D4D;
+}
+.config-buttom::after{
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 2rpx;
+	background-color: #E6E6E6;
+	left: 50%;
+}
+/* config */
+
+@keyframes toShow{
+	from{
+		transform: translateY(100%);
+	}
+	to{
+		transform: translateY(0);
+	}
+}
+
+.flex-row{display: flex;display: -webkit-flex;align-items: center;justify-content: space-between}
+.con-right-arrow{width: 32rpx;height: 32rpx;}
+
+.general-image{
+	width: 32rpx;
+	height: 32rpx;
+	background-size: 100%;
+}
+.dialog{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.7);
+}
+.image-44{
+	width: 44rpx;
+	height: 44rpx;
+	background-size: 100%;
+}
+
+.empty-section{padding-top: 100rpx;font-size: 28rpx;color: #999999;text-align: center;width: 100%;}
+.empty-section .empty-icon{width: 284rpx;height: 240rpx;display: block;margin: 0 auto 30rpx;}
+.empty-section .empty-btn{width: 280rpx;line-height: 90rpx;text-align: center;background: #FF3C51;border-radius: 200rpx;font-size: 30rpx;color: #FFFFFF;display: block;margin: 60rpx auto;}

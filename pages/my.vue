@@ -164,7 +164,7 @@
                         <image src="/static/juker-money.png"></image>
                         <view class="font-24">分红总额</view>
                         <view class="font-24">¥0</view>
-                        <view class="font-24" style="font-size: 20rpx;">(分红总额高于¥{{ giveSumTips(item.goods_price) }})</view>
+                        <view class="font-24" style="font-size: 20rpx;">(分红总额高于¥{{ item.goods_price }})</view>
                     </view>
                 </view>
             </view>
@@ -252,6 +252,8 @@
         <bind-account v-model="show_bind" :set_mobel="set_mobel"></bind-account>
         <no-permission :title="title" :message="message" :botton="botton" v-model="permission_dialog" @change="permission_change"></no-permission>
         <no-conditions v-model="conditions.dialog" :conditions="conditions" @change="conditions_change" :ok="is_ok"></no-conditions>
+        <!-- 置换方案 -->
+        <displacePopup :pageShowStatus="pageShowStatus" />
     </view>
 </template>
 
@@ -260,9 +262,11 @@ import my from './my'
 import bindAccount from 'index/components/bind_account.vue'
 import noPermission from 'components/no_permission.vue'
 import noConditions from 'components/no_conditions.vue'
+import displacePopup from '@/components/displace_popup/displace_popup.vue'
 export default {
     data() {
         return {
+            pageShowStatus: false,
             jukerData: [],
             bonusIndexs: [],
             bonusList: [],
@@ -305,6 +309,14 @@ export default {
     onShow() {
         this.juker_list()
         this.show()
+        // #ifdef APP-PLUS
+        this.pageShowStatus = true
+        // #endif
+    },
+    onHide() {
+        // #ifdef APP-PLUS
+        this.pageShowStatus = false
+        // #endif
     },
     onPullDownRefresh() {
         this.show()
@@ -319,7 +331,7 @@ export default {
     methods: {
         giveSumTips(value) {
             // 100000 50000 || 100000  10000 || 50000
-
+            console.log('giveSumTips', value)
             if (value >= 100000) {
                 return 100000
             } else if (value >= 50000 && value < 100000) {
@@ -531,7 +543,8 @@ export default {
     components: {
         bindAccount,
         noPermission,
-        noConditions
+        noConditions,
+        displacePopup
     }
 }
 </script>
